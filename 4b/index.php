@@ -30,7 +30,7 @@
         
         <!--  Form User  -->
         <div id="tambah_form_user" class="hidden absolute w-full top-0 bottom-0 left-0 right-0">
-            <div id="outside_close" onclick="addFormUser();" class="absolute w-full p-5 top-0 bottom-0 left-0 right-0 bg-black opacity-30 "></div>
+            <div id="outside_close" onclick="addFormUser();" class="absolute w-full p-5 top-0 bottom-0 left-0 right-0  "></div>
            
             <div id="content" style="max-width: 350px; " class="shadow-lg p-3 my-10 relative w-full bg-white p-10 mx-auto">
                 <h1 class="text-gray-400 text-2xl font-semibold mb-5"> Tambah Users </h1>
@@ -51,7 +51,7 @@
 
         <!-- form skill -->
         <div id="tambah_form_skil" class="hidden absolute w-full top-0 bottom-0 left-0 right-0">
-            <div id="outside_close" onclick="addFormskil();" class="absolute w-full p-5 top-0 bottom-0 left-0 right-0 bg-black opacity-30 "></div>
+            <div id="outside_close" onclick="addFormskil();" class="absolute w-full p-5 top-0 bottom-0 left-0 right-0  "></div>
            
             <div id="content" style="max-width: 350px; " class="shadow-lg p-3 my-10 relative w-full bg-white p-10 mx-auto">
                 <h1 class="text-gray-400 text-2xl font-semibold mb-5"> Tambah skil </h1>
