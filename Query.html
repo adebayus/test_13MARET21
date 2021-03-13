@@ -1,0 +1,39 @@
+CREATE TABLE users_tb (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL, 
+    photo varchar(255) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+INSERT INTO users_tb (id,name,photo) values (NULL, "Arie", "arie.jpg");
+INSERT INTO users_tb (id,name,photo) values (NULL, "Ahmad", "ahmad.jpg");
+INSERT INTO users_tb (id,name,photo) values (NULL, "Bayu", "bayu.jpg");
+INSERT INTO users_tb (id,name,photo) values (NULL, "Deny", "deny.jpg");
+INSERT INTO users_tb (id,name,photo) values (NULL, "Erlang", "erlang.jpg");
+INSERT INTO users_tb (id,name,photo) values (NULL, "Fahri", "fahri.jpg");
+
+
+CREATE TABLE skil_tb (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL, 
+    user_id int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users_tb(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO skil_tb (id,name,user_id) values (NULL, "Menggambar", 1);
+INSERT INTO skil_tb (id,name,user_id) values (NULL, "HTML & CSS", "1");
+INSERT INTO skil_tb (id,name,user_id) values (NULL, "UX/UI", 4);
+INSERT INTO skil_tb (id,name,user_id) values (NULL, "Desain Mobile ", 4);
+INSERT INTO skil_tb (id,name,user_id) values (NULL, "JavaScript", 2);
+INSERT INTO skil_tb (id,name,user_id) values (NULL, "REACT JS", 2);
+
+
+<!-- Tampilkan seluruh data dari table user beserta skill dari user tsb -->
+SELECT users_tb.id, users_tb.name, users_tb.photo, skil_tb.name as "skil" FROM users_tb JOIN skil_tb on users_tb.id = skil_tb.user_id ;
+
+<!-- Tampilkan seluruh data user berdasarkan skill tertentu -->
+SELECT users_tb.*, skil_tb.name FROM users_tb JOIN skil_tb ON users_tb.id = skil_tb.user_id WHERE skil_tb.name="Menggambar";
+
+<!-- Tampilkan spesifik data user dengan skill nya -->
+SELECT users_tb.*, skil_tb.name as "skil" FROM users_tb JOIN skil_tb ON users_tb.id = skil_tb.user_id WHERE users_tb.id=1;
