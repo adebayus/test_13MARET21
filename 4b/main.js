@@ -1,8 +1,3 @@
-function bodyLock(){
-    const body = document.getElementById("body")
-    body.classList.toggle("overflow-y-hidden");
-    console.log(body);
-}
 
 function showAddListButton(){
     const menu_tambah = document.getElementById("menu_tambah");
@@ -15,7 +10,7 @@ function modalDeleteAlert(){
     const menu_tambah = document.getElementById("delete_alert");
    
     menu_tambah.classList.toggle("hidden")
-    bodyLock();
+    // bodyLock();
 
 }
 
@@ -23,11 +18,11 @@ function addFormUser(){
     const menu_tambah = document.getElementById("tambah_form_user");
    
     menu_tambah.classList.toggle("hidden")
-    bodyLock();
+    // bodyLock();
 }
 function addFormSkil(){
     const menu_tambah = document.getElementById("tambah_form_skil");
    
     menu_tambah.classList.toggle("hidden")
-    bodyLock();
+    // bodyLock();
 }

@@ -45,7 +45,7 @@
                     </div>
                     <input type="submit" name="submit" value="Tambahkan" class="cursor-pointer w-full rounded bg-green-400 text-white py-2 px-3">
                 </form>
-                <button onclick="closeModalForm(`tambah_form_user`);" class="mt-2 cursor-pointer w-full rounded bg-gray-400 text-white py-2 px-3"> Close </button>
+                <button onclick="addFormUser(`tambah_form_user`);" class="mt-2 cursor-pointer w-full rounded bg-gray-400 text-white py-2 px-3"> Close </button>
             </div>
         </div>
 
@@ -76,9 +76,10 @@
                     </div>
                     <input type="submit" name="submit" value="Tambahkan" class="cursor-pointer w-full rounded bg-green-400 text-white py-2 px-3">
                 </form>
-                <button onclick="closeModalForm(`tambah_form_user`);" class="mt-2 cursor-pointer w-full rounded bg-gray-400 text-white py-2 px-3"> Close </button>
+                <button onclick="addFormSkil(`tambah_form_user`);" class="mt-2 cursor-pointer w-full rounded bg-gray-400 text-white py-2 px-3"> Close </button>
             </div>
         </div>
+
         <div id="skil_template" class="mt-5">
             <h1 class="text-gray-400 text-5xl font-semibold"> List Skil </h1>
             <!-- <p class="text-gray-300 mb-5">*click skil to <span class="text-red-300">Delete</span> </p> -->
@@ -144,6 +145,7 @@
                 ?>
             </div>
         </div>
+
         <div id="user_template" class="mt-10">
             <h1 class="text-gray-400 text-5xl font-semibold mb-5"> List User </h1>
             <div id="card_template" class=" grid gap-5 lg:grid-cols-5 xl:grid-cols-6 md:grid-cols-4">
